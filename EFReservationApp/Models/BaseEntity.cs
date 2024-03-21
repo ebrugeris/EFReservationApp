@@ -10,5 +10,6 @@ namespace EFReservationApp.Models
     {
         public int Id { get; set; }
         public DateTime AddDate { get; set; } = DateTime.Now;
+        public bool IsDeleted { get; set; } = false;
     }
 }

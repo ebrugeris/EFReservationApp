@@ -34,11 +34,11 @@
             label3 = new Label();
             txtPrice = new TextBox();
             label1 = new Label();
-            dgvCustomers = new DataGridView();
+            dgvMenus = new DataGridView();
             btnAdd = new Button();
             btnUpdate = new Button();
             btnDelete = new Button();
-            ((System.ComponentModel.ISupportInitialize)dgvCustomers).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvMenus).BeginInit();
             SuspendLayout();
             // 
             // txtTitle
@@ -89,14 +89,15 @@
             label1.TabIndex = 4;
             label1.Text = "Price:";
             // 
-            // dgvCustomers
+            // dgvMenus
             // 
-            dgvCustomers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCustomers.Location = new Point(9, 241);
-            dgvCustomers.Name = "dgvCustomers";
-            dgvCustomers.RowHeadersWidth = 51;
-            dgvCustomers.Size = new Size(765, 188);
-            dgvCustomers.TabIndex = 11;
+            dgvMenus.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvMenus.Location = new Point(9, 241);
+            dgvMenus.Name = "dgvMenus";
+            dgvMenus.RowHeadersWidth = 51;
+            dgvMenus.Size = new Size(883, 292);
+            dgvMenus.TabIndex = 11;
+            dgvMenus.CellClick += dgvMenus_CellClick;
             // 
             // btnAdd
             // 
@@ -106,6 +107,7 @@
             btnAdd.TabIndex = 8;
             btnAdd.Text = "Add";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // btnUpdate
             // 
@@ -115,6 +117,7 @@
             btnUpdate.TabIndex = 9;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // btnDelete
             // 
@@ -125,13 +128,14 @@
             btnDelete.TabIndex = 10;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
             // 
             // FrmAddMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(dgvCustomers);
+            ClientSize = new Size(904, 545);
+            Controls.Add(dgvMenus);
             Controls.Add(btnAdd);
             Controls.Add(btnUpdate);
             Controls.Add(btnDelete);
@@ -143,7 +147,8 @@
             Controls.Add(label1);
             Name = "FrmAddMenu";
             Text = "FrmAddMenu";
-            ((System.ComponentModel.ISupportInitialize)dgvCustomers).EndInit();
+            Load += FrmAddMenu_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvMenus).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -156,7 +161,7 @@
         private Label label3;
         private TextBox txtPrice;
         private Label label1;
-        private DataGridView dgvCustomers;
+        private DataGridView dgvMenus;
         private Button btnAdd;
         private Button btnUpdate;
         private Button btnDelete;

@@ -1,6 +1,6 @@
 ﻿namespace EFReservationApp.Forms
 {
-    partial class AddCustomerForm
+    partial class FrmAddCustomer
     {
         /// <summary>
         /// Required designer variable.
@@ -70,6 +70,7 @@
             btnDelete.TabIndex = 2;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
             // 
             // label2
             // 
@@ -143,6 +144,7 @@
             dgvCustomers.RowHeadersWidth = 51;
             dgvCustomers.Size = new Size(753, 188);
             dgvCustomers.TabIndex = 3;
+            dgvCustomers.CellClick += dgvCustomers_CellClick;
             // 
             // btnUpdate
             // 
@@ -152,6 +154,7 @@
             btnUpdate.TabIndex = 2;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // btnAdd
             // 
@@ -161,8 +164,9 @@
             btnAdd.TabIndex = 2;
             btnAdd.Text = "Add";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
-            // AddCustomerForm
+            // FrmAddCustomer
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -181,8 +185,9 @@
             Controls.Add(label2);
             Controls.Add(txtEmail);
             Controls.Add(label1);
-            Name = "AddCustomerForm";
+            Name = "FrmAddCustomer";
             Text = "AddCustomerForm";
+            Load += FrmAddCustomer_Load;
             ((System.ComponentModel.ISupportInitialize)dgvCustomers).EndInit();
             ResumeLayout(false);
             PerformLayout();
