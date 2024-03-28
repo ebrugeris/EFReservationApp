@@ -50,7 +50,7 @@ namespace EFReservationApp.Forms
             if (customer != null)
             {
                 customerServices.Delete(customer);
-            }      
+            }
             LoadData();
         }
 
